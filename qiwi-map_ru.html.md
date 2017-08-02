@@ -5,7 +5,7 @@ search: true
 
 metatitle: QIWI-Terminal-Map API 1.0.0
 
-metadescription: API Карты терминалов QIWI позволяет установить местонахождение терминалов на территории РФ.
+metadescription: API Карты терминалов QIWI позволяет установить местонахождение терминалов QIWI на территории РФ.
 
 language_tabs:
   - shell
@@ -23,7 +23,7 @@ toc_footers:
 
 ###### Последнее обновление: 2017-08-02 | [Редактировать на GitHub](https://github.com/QIWI-API/qiwi-map-docs/blob/master/qiwi-map_ru.html.md)
 
-API Карты терминалов QIWI позволяет установить местонахождение терминалов на территории РФ.
+API Карты терминалов QIWI позволяет установить местонахождение терминалов QIWI на территории РФ.
 
 <aside class="notice">
 С открытым исходным кодом приложения карты терминалов можно ознакомиться <a href="https://github.com/QIWI-API/qiwi-map">по ссылке</a>
@@ -94,7 +94,7 @@ Content-Type: text/json
 ---------|--------|---|------
 address | URL encoded данные адреса терминала | String|+
 page | ? | Long|+
-ttpId | 19 - терминалы партнеров; 4 - терминалы QIWI | Long |-
+ttpId | `19` - терминалы партнеров; `4` - терминалы QIWI | Long |-
 verified | Месторасположение подтверждено | Boolean|-
 activeWithinMinutes | Активность в течении X минут |Long|-
 
@@ -122,7 +122,7 @@ longtitude | Долгота |Double
 precision | Погрешность |Double
 lastActive | Время последней активности терминала |Date
 terminalId | Номер терминала |Long
-ttpId | Тип терминала. 19 - терминал партнера; 4 - терминал QIWI |Number
+ttpId | Тип терминала: `19` - терминал партнера; `4` - терминал QIWI |Number
 verified | Подтвержденный адрес |Boolean
 
 ## Поиск по координатам v1 {#area-search}
@@ -182,8 +182,8 @@ Content-Type: text/json
 latNW | Широта | Double|+
 lngNW | Долгота | Double|+
 zoom | Масштаб % | Integer |-
-ttpId | Тип терминала. 19 - терминал партнера; 4 - терминал QIWI | Long|-
-activeWithinMinutes | Активность в течении X минут |Long|-
+ttpId | Тип терминала: `19` - терминал партнера; `4` - терминал QIWI | Long|-
+activeWithinMinutes | Активность в течение последних X минут |Long|-
 withRefillWallet| Возможность пополнения кошелька |Boolean|-
 
 
@@ -196,7 +196,7 @@ withRefillWallet| Возможность пополнения кошелька |
 address | Адрес |String
 cardAllowed | Прием карт |Boolean
 cashAllowed | Прием наличных |Boolean
-coordinate | Объект координат |String
+coordinate | Объект координат |Object
 latitude | Широта |Double
 longtitude | Долгота |Double
 precision | Погрешность |Double
@@ -205,7 +205,7 @@ description | ? |String
 label | ? |String
 LastActive | Время последней активности |Number
 terminalId| Номер терминала |Long
-ttpId| Тип терминала. 19 - терминал партнера; 4 - терминал QIWI | Long
+ttpId| Тип терминала: `19` - терминал партнера; `4` - терминал QIWI | Long
 verified | Подтвержденный адрес |Boolean
 
 
@@ -269,7 +269,7 @@ latSE | ? | Double|+
 lngSE | ? | Double|+
 zoom | ? | Integer |-
 ttpId | ? | Long|-
-activeWithinMinutes | Активность в течении X минут |Long|-
+activeWithinMinutes | Активность в течение последних X минут |Long|-
 withRefillWallet| Возможность пополнения кошелька |Boolean|-
 
 
@@ -282,16 +282,16 @@ withRefillWallet| Возможность пополнения кошелька |
 address | Адрес |String
 cardAllowed | Прием карт |Boolean
 cashAllowed | Прием наличных |Boolean
-coordinate | Объект координат |String
+coordinate | Объект координат |Object
 latitude | Широта |Double
 longtitude | Долгота |Double
 precision | Погрешность |Double
 count | ? |Integer
 description | ? |String
 label | ? |String
-LastActive | Время последней активности |Number
+lastActive | Время последней активности |Number
 terminalId| Номер терминала |Long
-ttpId| Тип терминала. 19 - терминал партнера; 4 - терминал QIWI | Long
+ttpId| Тип терминала: `19` - терминал партнера; `4` - терминал QIWI | Long
 verified | Подтвержденный адрес |Boolean
 
 
