@@ -21,7 +21,7 @@ toc_footers:
 
 # API Карты терминалов QIWI {#qiwi-map}
 
-###### Последнее обновление: 2017-08-02 | [Редактировать на GitHub](https://github.com/QIWI-API/qiwi-map-docs/tree/master)
+###### Последнее обновление: 2017-08-02 | [Редактировать на GitHub](https://github.com/QIWI-API/qiwi-map-docs/blob/master/qiwi-map_ru.html.md)
 
 API Карты терминалов QIWI позволяет установить местонахождение терминалов на территории РФ.
 
