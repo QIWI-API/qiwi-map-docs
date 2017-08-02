@@ -21,7 +21,7 @@ toc_footers:
 
 # API Карты терминалов QIWI {#qiwi-map}
 
-###### Последнее обновление: 2017-08-02 | [Редактировать на GitHub](https://github.com/QIWI-API/pull-payments-docs/blob/master/pullrest_ru.html.md)
+###### Последнее обновление: 2017-08-02 | [Редактировать на GitHub](https://github.com/QIWI-API/qiwi-map-docs/tree/master)
 
 API Карты терминалов QIWI позволяет установить местонахождение терминалов на территории РФ.
 
