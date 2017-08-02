@@ -2,5 +2,10 @@
  
  ## Документация API Карты терминалов QIWI 
  Позволяет установить местонахождение терминалов на территории РФ c помощью открытого API.
+ ### https://github.com/QIWI-API/qiwi-map-docs/blob/master/qiwi-map_ru.html.md
  
- ### <a href="https://github.com/QIWI-API/qiwi-map-docs/blob/master/qiwi-map_ru.html.md">Подробнее</a>
+ 
+ ## JS приложение
+ ### https://github.com/QIWI-API/qiwi-map-application
+ 
+ 
