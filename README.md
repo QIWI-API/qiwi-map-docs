@@ -7,6 +7,5 @@
  
  <a href="https://github.com/QIWI-API/qiwi-map-application">JS приложение</a>
  
- <img src="https://developer.qiwi.com/qiwi-map/images/qiwi-map.png"/>
  
  
