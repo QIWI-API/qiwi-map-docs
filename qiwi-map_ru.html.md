@@ -93,9 +93,9 @@ Content-Type: text/json
 Параметр|Описание|Тип|Обяз.
 ---------|--------|---|------
 address | URL encoded данные адреса терминала | String|+
-page | ? | Long|+
+page | Номер страницы в выгрузке | Long|+
 ttpId | `19` - терминалы партнеров; `4` - терминалы QIWI | Long |-
-verified | Месторасположение подтверждено | Boolean|-
+verified | Адрес терминала верифицирован и является актуальным | Boolean|-
 activeWithinMinutes | Активность в течении X минут |Long|-
 
 
@@ -105,9 +105,9 @@ activeWithinMinutes | Активность в течении X минут |Long|
 
 Параметр|Описание|Тип
 ---------|--------|---
-page | ? | String
-pageCount | ? | Long
-pageSize | ?| Long
+page | Номер страницы в выдаче результатов запроса. Количество терминалов одной страницы не может превышать 1000 | String
+pageCount | Количество страниц в результате запроса | Long
+pageSize | Количество терминалов в одной странице. Максимальное 1000| Long
 terminals | Массив найденных терминалов | Array
 adress | Объект данных о терминале |Object
 city | Город |String
@@ -123,9 +123,9 @@ precision | Погрешность |Double
 lastActive | Время последней активности терминала |Date
 terminalId | Номер терминала |Long
 ttpId | Тип терминала: `19` - терминал партнера; `4` - терминал QIWI |Number
-verified | Подтвержденный адрес |Boolean
+verified | Адрес терминала верифицирован и является актуальным |Boolean
 
-## Поиск по координатам v1 {#area-search}
+## Поиск по координатам {#area-search}
 
 Поиск терминалов по заданным координатам.
 
@@ -193,25 +193,30 @@ withRefillWallet| Возможность пополнения кошелька |
 
 Параметр|Описание|Тип
 ---------|--------|---
-address | Адрес |String
+address | Адрес терминала|String
 cardAllowed | Прием карт |Boolean
 cashAllowed | Прием наличных |Boolean
 coordinate | Объект координат |Object
 latitude | Широта |Double
 longtitude | Долгота |Double
 precision | Погрешность |Double
-count | ? |Integer
-description | ? |String
-label | ? |String
+count | Количество терминалов на странице |Integer
+description | Описание терминала. Может содержать время работы и прочие данные |String
+label | Название терминала |String
 LastActive | Время последней активности |Number
 terminalId| Номер терминала |Long
 ttpId| Тип терминала: `19` - терминал партнера; `4` - терминал QIWI | Long
-verified | Подтвержденный адрес |Boolean
+verified | Адрес терминала верифицирован и является актуальным |Boolean
 
 
-## Поиск по координатам v2 {#areas-search}
+## Поиск по полигону {#areas-search}
 
-Поиск терминалов по заданным координатам.
+Поиск терминалов по заданным координатам полигона.
+
+
+<aside class="notice">
+Если диагональ полигона больше 100 км и при этом zoom больше 12 сработает ограничение и запрос выполнится с ошибкой
+</aside>
 
 ~~~shell
 user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/v2/nearest/clusters?latNW=57.05930421115318&lngNW=59.97245277050781&latSE=56.60762621886134&lngSE=61.20154822949221&zoom=10'
@@ -263,12 +268,12 @@ Content-Type: text/json
 
 Параметр|Описание|Тип|Обяз.
 ---------|--------|---|------
-latNW | ? | Double|+
-lngNW | ? | Double|+
-latSE | ? | Double|+
-lngSE | ? | Double|+
-zoom | ? | Integer |-
-ttpId | ? | Long|-
+latNW | Широва северо-западной точки | Double|+
+lngNW | Долгота северо-западной точки | Double|+
+latSE | Широта юго-восточной точки | Double|+
+lngSE | Долгота юго-восточной точки | Double|+
+zoom | Масштаб | Integer |-
+ttpId | Тип терминала: `19` - терминал партнера; `4` - терминал QIWI | Long|-
 activeWithinMinutes | Активность в течение последних X минут |Long|-
 withRefillWallet| Возможность пополнения кошелька |Boolean|-
 
@@ -286,9 +291,9 @@ coordinate | Объект координат |Object
 latitude | Широта |Double
 longtitude | Долгота |Double
 precision | Погрешность |Double
-count | ? |Integer
-description | ? |String
-label | ? |String
+count | Количество терминалов на странице  |Integer
+description | Описание терминала. Может содержать время работы и прочие данные |String
+label | Название терминала |String
 lastActive | Время последней активности |Number
 terminalId| Номер терминала |Long
 ttpId| Тип терминала: `19` - терминал партнера; `4` - терминал QIWI | Long
