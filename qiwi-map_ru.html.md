@@ -1,9 +1,9 @@
 ---
-title: QIWI-Terminal-Map API 1.0.0
+title: QIWI-Map API 1.0.0
 
 search: true
 
-metatitle: QIWI-Terminal-Map API 1.0.0
+metatitle: QIWI-Map API 1.0.0
 
 metadescription: API Карты терминалов QIWI позволяет установить местонахождение терминалов QIWI на территории РФ.
 
