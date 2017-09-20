@@ -37,7 +37,7 @@ API Карты терминалов QIWI позволяет установить
 Запрос выполняет поиск терминалов по заданному адресу и ряду дополнительных параметров.
 
 ~~~shell
-user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/address?address=%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%BF%D0%BE%D0%B2%D0%B0%20&page=1&ttpId=0'
+user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/locator/address?address=%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%BF%D0%BE%D0%B2%D0%B0%20&page=1&ttpId=0'
 
 HTTP/1.1 200 OK
 Content-Type: text/json
@@ -71,7 +71,7 @@ Content-Type: text/json
 ~~~
 
 <ul class="nestedList url">
-    <li><h3>URL <span>https://edge.qiwi.com/address</span></h3>
+    <li><h3>URL <span>https://edge.qiwi.com/locator/address</span></h3>
     </li>
 </ul>
 
@@ -80,7 +80,7 @@ Content-Type: text/json
 <ul class="nestedList header">
     <li><h3>HEADERS</h3>
         <ul>
-             <li>Accept: text/json или Accept: application/json - формат ответа JSON</li>
+             <li>Accept: application/json;charset=UTF-8 - формат ответа JSON</li>
         </ul>
     </li>
 </ul>
@@ -131,7 +131,7 @@ verified | Адрес терминала верифицирован и явля�
 Поиск терминалов по заданным координатам.
 
 ~~~shell
-user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/v2/nearest/cluster?latNW=57.05930421115318&lngNW=59.97245277050781&zoom=10'
+user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/locator/v2/nearest/cluster?latNW=57.05930421115318&lngNW=59.97245277050781&zoom=10'
 
 HTTP/1.1 200 OK
 Content-Type: text/json
@@ -158,7 +158,7 @@ Content-Type: text/json
 ~~~
 
 <ul class="nestedList url">
-    <li><h3>URL <span>https://edge.qiwi.com/v2/nearest/clusters</span></h3>
+    <li><h3>URL <span>https://edge.qiwi.com/locator/v2/nearest/cluster</span></h3>
     </li>
 </ul>
 
@@ -167,7 +167,7 @@ Content-Type: text/json
 <ul class="nestedList header">
     <li><h3>HEADERS</h3>
         <ul>
-             <li>Accept: text/json или Accept: application/json - формат ответа JSON</li>
+             <li>Accept: application/json;charser=UTF-8 - формат ответа JSON</li>
         </ul>
     </li>
 </ul>
@@ -220,7 +220,7 @@ verified | Адрес терминала верифицирован и явля�
 </aside>
 
 ~~~shell
-user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/v2/nearest/clusters?latNW=57.05930421115318&lngNW=59.97245277050781&latSE=56.60762621886134&lngSE=61.20154822949221&zoom=10'
+user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/locator/v2/nearest/clusters?latNW=57.05930421115318&lngNW=59.97245277050781&latSE=56.60762621886134&lngSE=61.20154822949221&zoom=10'
 
 HTTP/1.1 200 OK
 Content-Type: text/json
@@ -247,7 +247,7 @@ Content-Type: text/json
 ~~~
 
 <ul class="nestedList url">
-    <li><h3>URL <span>https://edge.qiwi.com/v2/nearest/clusters</span></h3>
+    <li><h3>URL <span>https://edge.qiwi.com/locator/v2/nearest/clusters</span></h3>
     </li>
 </ul>
 
@@ -256,7 +256,7 @@ Content-Type: text/json
 <ul class="nestedList header">
     <li><h3>HEADERS</h3>
         <ul>
-             <li>Accept: text/json или Accept: application/json - формат ответа JSON</li>
+             <li>Accept: application/json;charset=UTF-8 - формат ответа JSON</li>
         </ul>
     </li>
 </ul>
