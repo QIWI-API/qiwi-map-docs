@@ -139,7 +139,7 @@ cardAllowed | Прием карт |Boolean
 cashAllowed | Прием наличных |Boolean
 coordinate | Объект координат |Object
 coordinate.latitude | Широта |Double
-coordinate.longtitude | Долгота |Double
+coordinate.longitude | Долгота |Double
 coordinate.precision | Погрешность, в метрах |Double
 count | Количество терминалов в кластере |Integer
 description | Описание терминала. Может содержать время работы и прочие данные |String
