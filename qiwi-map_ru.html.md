@@ -22,7 +22,7 @@ toc_footers:
 
 # API Карты терминалов QIWI {#qiwi-map}
 
-###### Последнее обновление: 2018-12-07 | [Редактировать на GitHub](https://github.com/QIWI-API/qiwi-map-docs/blob/master/qiwi-map_ru.html.md)
+###### [Редактировать на GitHub](https://github.com/QIWI-API/qiwi-map-docs/blob/master/qiwi-map_ru.html.md)
 
 API Карты терминалов QIWI позволяет установить местонахождение терминалов QIWI на территории РФ и отобразить их на карте Google Map или Яндекс.Карты.
 
@@ -40,8 +40,14 @@ API Карты терминалов QIWI позволяет установить
 Поиск терминалов в окрестности заданных координат.
 
 ~~~shell
-user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/locator/v3/nearest/clusters?latNW=55.690881&latSE=55.580184&lngNW=37.386282&lngSE=37.826078&zoom=12&withRefillWallet=true&ttpGroups[0]=4&identificationTypes[1]=2&cardAllowed=true&cacheAllowed=true'
+curl -X GET \
+  --header 'Accept: application/json;charset=UTF-8' \
+  'https://edge.qiwi.com/locator/v3/nearest/clusters?latNW=55.690881&latSE=55.580184&lngNW=37.386282&lngSE=37.826078&zoom=12&withRefillWallet=true&ttpGroups[0]=4&identificationTypes[1]=2&cardAllowed=true&cacheAllowed=true'
+~~~
 
+> Ответ
+
+~~~http
 HTTP/1.1 200 OK
 Content-Type: text/json
 
@@ -155,8 +161,14 @@ identificationType | 0 - нет идентификации<br>1 - частичн
 Получение справочника типов (групп) терминалов.
 
 ~~~shell
-user@server:~$ curl -X GET --header 'Accept: application/json;charset=UTF-8' 'https://edge.qiwi.com/locator/v3/ttp-groups'
+curl -X GET \
+  --header 'Accept: application/json;charset=UTF-8' \
+  'https://edge.qiwi.com/locator/v3/ttp-groups'
+~~~
 
+> Ответ
+
+~~~http
 HTTP/1.1 200 OK
 Content-Type: text/json
 
